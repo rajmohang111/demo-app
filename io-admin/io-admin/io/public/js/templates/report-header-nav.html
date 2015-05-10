@@ -1,0 +1,43 @@
+<div>
+  <div class="row-fluid ad-bottom-line">
+    <div class="span3 ">
+      <span  class="ad-report-icon"></span><span class="ad-icon-text">Create New Report</span>
+    </div>
+    <div class="span9 ">
+      <alert class="ad-alert" ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+    </div>
+  </div>
+  <!-- ad-report-nav -->
+  <div class="row-fluid ad-spacer ad-report-nav ad-border-line">
+    <div class="span3">
+      <div ng-class="{'ad-report-nav-active' : reportTab == 'detail'}">
+        <span class="nav-head-cell">Report Detail</span>
+        <i ng-class="{detail : 'ad-nav-active-arrow',input: 'ad-nav-active-left-arrow',
+      output:'ad-nav-inactive-arrow',sql:'ad-nav-inactive-arrow'}[reportTab]"  class="pull-right"></i>
+      </div>
+    </div>
+    <div class="span3">
+      <div ng-class="{'ad-report-nav-active' : reportTab == 'input'}">
+        <span class="nav-head-cell">Report Input</span>
+        <i ng-class="{detail : 'ad-nav-inactive-arrow',input: 'ad-nav-active-arrow',
+      output:'ad-nav-active-left-arrow',sql:'ad-nav-inactive-arrow'}[reportTab]"  class="pull-right"></i>
+      </div>
+    </div>
+    <div class="span3">
+      <div ng-class="{'ad-report-nav-active' : reportTab == 'output'}">
+        <span class="nav-head-cell">Report Output</span>
+        <i ng-class="{detail : 'ad-nav-inactive-arrow',input : 'ad-nav-inactive-arrow',
+      output : 'ad-nav-active-arrow', sql : 'ad-nav-active-left-arrow'}[reportTab]"  class="pull-right"></i>
+      </div>
+    </div>
+    <div class="span3">
+      <div ng-class="{'ad-report-nav-active' : reportTab == 'sql'}">
+        <span class="nav-head-cell">Report SQL</span>
+      </div>
+    </div>
+  </div>
+  <!-- /ad-report-nav -->
+
+</div>
+
+

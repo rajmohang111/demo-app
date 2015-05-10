@@ -1,0 +1,67 @@
+{
+    "id": "12953",
+    "report_name": "report22222",
+    "description": "test+report",
+    "report_type": "Batch",
+    "start_date": "1326372520000",
+    "date_expire": "1376373520000",
+    "days_to_expire": "1",
+    "schedules": [
+        {
+            "id": "",
+            "frequency": "D",
+            "hour": "00",
+            "minute": "00",
+            "time": ""
+        },
+        {
+            "id": "",
+            "frequency": "W",
+            "hour": "00",
+            "minute": "00",
+            "time": ""
+        }
+    ],
+    "input_type": "database",
+    "db_id": "19278",
+    "output_type": "webpage",
+    "library_name": "bugtest",
+    "library_id": "2206760827068",
+    "ddl_choose_libraries_options": "libraries",
+    "file_version": "singlefileupdated",
+    "timestamp_format": "",
+    "no_data_option": "1",
+    "sftp": "1",
+    "ftp": {
+        "ftp_file_encoding": "ascii",
+        "server": "",
+        "port": "",
+        "server_path": "",
+        "file_name": "",
+        "user": "",
+        "password": ""
+    },
+    "sections": [
+        {
+            "title": "sec+1",
+            "sql": "select * from t_person",
+            "field_list": []
+        }
+    ],
+    "parameters": [
+        {
+            "parameter_name": "param1",
+            "parameter_type": "char",
+            "parameter_value": "aaa",
+            "parameter_sql": ""
+        },
+        {
+            "parameter_name": "param2",
+            "parameter_type": "number",
+            "parameter_value": "123",
+            "parameter_sql": ""
+        }
+    ],
+    "action": "submit|save"
+}
+

@@ -1,0 +1,17 @@
+/*Set height for fixed bottom bar*/
+.ad-footer-outer {
+    height: 30px;
+    background-color: #949494;
+    color: #FFFFFF;
+    padding: 10px 0px 0px 30px;
+}
+
+.ad-fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    margin-bottom: 0;
+}
+

@@ -1,0 +1,42 @@
+MAC
+===
+1.) Install NodeJS version 0.8 or later from http://nodejs.org using the
+    Macintosh installer.
+2.) Open a terminal window
+3.) Execute: npm config set io:env local
+4.) Execute: npm config set io:debug true
+5.) Execute: npm config set registry "http://registry.npmjs.org/"
+6.) Execute: npm config set proxy "http://http-proxy.corporate.ge.com:80/"
+7.) Change to the directory where this INSTALL file exists.
+8.) Execute: make modules
+
+    This should download the required NodeJS .modules from the Internet using
+    the proxy settings above.
+9.) Run "npm start" to start up the server listening on port 8080
+
+
+WINDOWS
+=======
+1.) Install NodeJS version 0.8 or later from http://nodejs.org using the
+    Windows installer.
+2.) Click Start > Run and type "cmd" and click "OK"
+3.) Execute: npm config set io:env local
+4.) Execute: npm config set io:debug true
+5.) Execute: npm config set registry "http://registry.npmjs.org/"
+6.) Execute: npm config set proxy "http://http-proxy.corporate.ge.com:80/"
+7.) Change to the directory where this INSTALL file exists.
+8.) Execute: copy package.json.m4 package.json
+9.) Execute: notepad package.json
+10.) Replace "__BUILD__" in the version attribute near the top with a zero (0)
+11.) Execute: npm install
+
+    This should download the required NodeJS .modules from the Internet using
+    the proxy settings above.
+12.) Run "npm start" to start up the server listening on port 8080
+
+
+GruntJS
+=======
+1.) Install Grunt client.  npm install -g grunt-cli
+2.) Install Grunt npm install -g grunt@0.4.0x
+3.) Run grunt version to check. grunt --version

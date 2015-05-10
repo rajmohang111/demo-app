@@ -1,0 +1,17 @@
+<div class="ad-content-main ad-new-report">
+  <div class="container-fluid" >
+    <!---- ad-report-nav --->
+    <div ng-include="'/js/templates/report-header-nav.html'"></div>
+    <!-- ./ad-report-nav -->
+    <form name="reportForm" novalidate class="ad-forms">
+      <div ng-show="reportTab=='detail'" ng-include="'/js/templates/report-detail.html'">  </div>
+      <div  ng-show="reportTab=='input'"  ng-include="'/js/templates/report-input.html'">  </div>
+      <div  ng-show="reportTab=='output'"  ng-include="'/js/templates/report-output.html'">  </div>
+      <div  ng-show="reportTab=='sql'"  ng-include="'/js/templates/report-sql.html'">  </div>
+    </form>
+    <!---- bottom-nav --->
+    <div ng-include="'/js/templates/report-footer-nav.html'"></div>
+    <!-- ./bottom-nav -->
+
+  </div>
+</div>

@@ -1,0 +1,106 @@
+<h1 class="brand">I/O ADMIN</h1>
+<tabset>
+    <tab >
+        <tab-heading >
+            <div data-ng-click="parentResize()"><span class="ad-report-icon"></span> <span class="ad-icon-text" >Reports</span></div>    
+        </tab-heading>
+        <div class="ad-content-main">
+            <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+            <div class="row-fluid">
+                <div ng-hide="reportHide" ng-init="reportHide=false; reportClass=true;"  >
+                    <div class="row-fluid">
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span12 ad-grid-header">
+                            <input type="text" ng-model="filterOptions.filterText" placeholder="Search">
+                            <a href="#" class="ad-search-img-btn"></a> 
+                            <span class="ad-adv-search-btn" data-ng-click="advanceSearch()">
+                                Advanced Search </span> 
+                        </div>
+                    </div>
+                    <!-- Advance Search form start -->
+                    <div ng-init="advSearchShow=false" ng-show="advSearchShow" class="row-fluid">
+                        <div class="span12 ad-advance-search">
+                            <div class="row-fluid">
+                                <div class="span12">
+                                    <div class="row-fluid">
+                                        <div class="span2">Community Name:</div>
+                                        <div class="span2"><input type="text" class="input-medium" name="communityFilter" id="communityFilter" placeholder="Community Name" data-ng-model="dataFilter.communityName" /></div>
+                                        <div class="span2">Created Date:</div>
+                                        <div class="span4" data-ng-controller="DatepickerCtrl">
+                                            <input type="text" name="start-date" class="input-medium"
+                                                                  datepicker-popup="MM-dd-yyyy" show-weeks="false"
+                                                                  ng-model="$parent.dateFilter.createdFrom" open="openedFrom" ng-required="true"
+                                                                  placeholder="From" data-ng-click="open()"> 
+                                            <a data-ng-click="open()" class="ad-calendar-icon-sml"></a>
+                                            <input type="text" name="end-date" class="input-medium"
+                                           datepicker-popup="MM-dd-yyyy" show-weeks="false" ng-model="$parent.dateFilter.createdTo"
+                                           open="openTo" ng-required="true" placeholder="To" data-ng-click="open()"> 
+                                           <a data-ng-click="open()" class="ad-calendar-icon-sml"></a>
+                                        </div>
+                                        <div class="span2"></div>
+                                    </div>
+                                    <div class="row-fluid">
+                                        <div class="span2">Created By:</div>
+                                        <div class="span2"><input type="text" class="input-medium" name="createdByFilter" id="createdByFilter" placeholder="Created By" data-ng-model="dataFilter.createdBy" /></div>
+                                        <div class="span2">Expire Date:</div>
+                                        <div class="span4" data-ng-controller="DatepickerCtrl">
+                                            <input type="text" name="expire-start-date" class="input-medium"
+                                           datepicker-popup="MM-dd-yyyy" show-weeks="false"
+                                           ng-model="$parent.dateFilter.expireFrom" open="openedExpireFrom" ng-required="true"
+                                           placeholder="From" data-ng-click="open()"> <a data-ng-click="open()"
+                                           class="ad-calendar-icon-sml"></a>
+                                           <input type="text" name="expire-end-date" class="input-medium"
+                                           datepicker-popup="MM-dd-yyyy" show-weeks="false" ng-model="$parent.dateFilter.expireTo"
+                                           open="openedExpireTo" ng-required="true" placeholder="To" data-ng-click="open()"> <a
+                                           data-ng-click="open()" class="ad-calendar-icon-sml"></a>
+                                        </div>
+                                        <div class="span2">
+                                            <button type="button" class="btn btn-default btn-small" data-ng-click="advanceFilter()">Search</button>
+                                            <button type="button" id="search-cancel" data-ng-click="advanceSearchCancel()" class="btn btn-default btn-small">Cancel</button></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Advance Search form  end-->
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <div class="ad-report-details-grid" ng-grid="reportOptions"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </tab>
+    <tab>
+        <tab-heading>
+            <div data-ng-click="parentResize()">
+                <span class="ad-db-icon"></span> <span class="ad-icon-text">DB Connections</span>
+            </div>
+        </tab-heading>
+        <!--        DB connections grid start-->
+        <div ng-hide="dbHide" ng-init="dbHide=false;dbClass=true;">
+            <div class="row-fluid">
+            </div>
+            <div class="row-fluid">
+                <div class="span12 ad-grid-header">
+                    <div class="row-fluid">
+                        <div class="span4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="span12">
+                    <div class="ad-db-connection-grid" ng-grid="dbOptions"></div>
+                </div>
+            </div>
+        </div>
+        <!-- DB connections grid end-->
+    </tab>
+</tabset>
+<!--Load schedule details template -->
+<div ng-include="'/js/templates/schedule-details.html'"></div>
+<!--Load DB connection details template -->
+<div ng-include="'/js/templates/db-connection-modal.html'"></div>

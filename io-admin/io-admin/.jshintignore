@@ -1,0 +1,10 @@
+build
+node_modules
+io/public/build
+io/public/js/app.build.js
+io/public/js/i18n.js
+io/public/js/require-jquery.js
+io/public/js/text.js
+io/public/js/lib
+.svn
+.git

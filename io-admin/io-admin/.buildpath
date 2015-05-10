@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="lib" path="node_modules/express.zip"/>
+	<buildpathentry kind="src" path="node_modules/grunt/node_modules/findup-sync/node_modules/lodash/test/template"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+	<buildpathentry kind="lib" path="node_modules/karma/node_modules/socket.io/node_modules/socket.io-client/lib/vendor/web-socket-js/WebSocketMainInsecure.zip"/>
+</buildpath>

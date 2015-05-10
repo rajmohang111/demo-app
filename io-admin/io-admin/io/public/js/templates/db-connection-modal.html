@@ -1,0 +1,104 @@
+<div modal="dbShouldBeOpen" close="dbModalClose()" options="modalOpts" class="modal hide fade">
+    <div class="modal-header ad-modal-header">
+        <button type="button" class="close" ng-click="dbModalClose()">×</button>
+        <h5 id="db-modal-label">Database Connection Details</h5>
+    </div>
+    <div class="modal-body">
+        <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+        <ng-form name="dbForm">
+            <!-- new connection panel -->
+            <div class="row-fluid ">
+                <div class="span4 ad-forms-txt">
+                    Connection Name  
+                    <span class="pull-right">:</span>
+                </div>
+                <div class="span8"> <input type="text" ng-required="true"  ng-model="currentDb.db_name" class="span11" readonly="readonly"> </div>
+            </div>
+            <div class="row-fluid ">
+                <div class="span4 ad-forms-txt">
+                    DB Type 
+                    <span class="pull-right">:</span>
+                </div>
+                <div class="span8">
+                    <input type="text" ng-required="true"  ng-model="currentDb.db_type" class="span11" readonly="readonly"> 
+                </div>
+            </div>
+            <div ng-switch on="currentDb.db_type">
+                <div ng-switch-when="Oracle(8.0 and 8.i only)">
+                    <div class="row-fluid ">
+                        <div class="span4 ad-forms-txt">
+                            DB Address / DNS IP   
+                            <span class="pull-right">:</span>
+                        </div>
+                        <div class="span8"> <input  type="text" ng-required="true" ng-model="currentDb.host" class="span11" readonly="readonly"> </div>
+                    </div>
+                    <div class="row-fluid ">
+                        <div class="span4 ad-forms-txt">
+                            DB Port   
+                            <span class="pull-right">:</span>
+                        </div>
+                        <div class="span8"> <input type="text" ng-required="true" ng-model="currentDb.port" class="span11" readonly="readonly"> </div>
+                    </div>
+                    <div class="row-fluid ">
+                        <div class="span4 ad-forms-txt">
+                            Oracle DB SID    
+                            <span class="pull-right">:</span>
+                        </div>
+                        <div class="span8"> <input type="text" ng-required="true" ng-model="currentDb.sid" class="span11" readonly="readonly"> </div>
+                    </div>
+                </div>
+                <!-- ./Oracle 8.x div -->
+                <div ng-switch-when="Teradata">
+                    <div class="row-fluid ">
+                        <div class="span4 ad-forms-txt">
+                            DB Address / DNS IP    
+                            <span class="pull-right">:</span>
+                        </div>
+                        <div class="span8"> <input type="text" ng-required="true" ng-model="currentDb.host" class="span11" readonly="readonly"> </div>
+                    </div>
+                    <div class="row-fluid ">
+                        <div class="span4 ad-forms-txt">
+                            Teradata DB Name   
+                            <span class="pull-right">:</span>
+                        </div>
+                        <div class="span8"> <input type="text" ng-required="true" ng-model="currentDb.db_manager" class="span11" readonly="readonly"> </div>
+                    </div>
+                </div>
+                <!-- ./Teradata div -->
+                <div ng-switch-when="Oracle RAC">
+                    <div class="row-fluid ">
+                        <div class="span4 ad-forms-txt">
+                            Oracle TNS <i class="icon  icon-question-sign"></i>
+                            <span class="pull-right">:</span>
+                        </div>
+                        <div class="span8"><textarea rows="3" ng-required="true" ng-model="currentDb.rac_tns" class="span11" readonly="readonly"></textarea> </div>
+                    </div>
+                </div>
+                <!-- ./Oracle RAC div -->
+            </div>
+            <!-- ./output Selection div -->
+            <div class="row-fluid ">
+                <div class="span4 ad-forms-txt">
+                    Username   
+                    <span class="pull-right">:</span>
+                </div>
+                <div class="span8"> <input type="text" ng-required="true" ng-model="currentDb.username" class="span11" readonly="readonly"> </div>
+            </div>
+       
+            <div class="row-fluid ">
+                <div class="span4 ad-forms-txt">
+                    Description
+                    <span class="pull-right">:</span>
+                </div>
+                <div class="span8"> <textarea rows="3" ng-model="currentDb.db_description" class="span11" readonly="readonly"></textarea> </div>
+            </div>
+            <div class="row-fluid ">
+                <div class="span4"> </div>
+                <div class="span8"> <button type="button" class="btn btn-default" ng-click="chkDBConnection()">Check Connection</button> </div>
+            </div>
+            <!-- ./new connection panel -->
+        </ng-form>
+    </div>
+    <div class="modal-footer ad-modal-footer">
+    </div>
+</div>

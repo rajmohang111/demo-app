@@ -1,0 +1,7 @@
+.DS_Store
+.komodotools
+*.komodoproject
+node_modules
+build
+package.json
+npm-debug.log

@@ -1,0 +1,596 @@
+body {
+  padding-top: 80px;  /* for footer fixed bottom style */
+  padding-bottom: 65px;
+  overflow: auto;
+  color: #666666;
+}
+body textarea {
+  resize: none;
+}
+
+
+/* ---- home page ----- */
+
+/* ng-grid containers */
+.ad-report-details-grid, .ad-db-connection-grid{
+  clear: both;
+  border: 1px solid #d4d4d4;
+  height: 563px; 
+}
+
+/* ng-grid container for schedules popup */
+.add-schedules-grid{
+  clear: both;
+  border: 1px solid #d4d4d4;
+  height: 263px; 
+}
+/* header text */
+.ad-icon-text {
+  font-weight:bold;
+  line-height: 40px;
+  padding-left: 10px;
+}
+/* ng-grid container header */
+.ad-grid-header{
+  background-color:rgb(158,158,158) ;
+  background: url(../img/search-bar-bg.png) repeat-x;
+  padding:5px 5px 5px 20px;
+  color: white;
+  height: 40px;
+  margin: 0px;
+}
+.ad-grid-header a{
+  color: white;
+  font-weight: 500;
+}
+.ad-search-img-btn{
+  display: inline-block;
+  position: relative;
+  left: -40px;
+  top: 3px;
+  background: url(../img/ad-icons.png) no-repeat -84px 0px;
+  width: 23px;
+  height: 23px;
+
+}
+.ad-adv-search-btn{
+  cursor: pointer;
+  vertical-align: text-bottom;
+  line-height: 24px;
+}
+.ad-adv-search-btn a{
+  color: #666666;
+}
+.ad-adv-search-btn a:hover{
+  text-decoration: none;
+}
+/* advance search box */
+.ad-advance-search{
+  vertical-align: middle;
+  line-height: 40px;
+  border-left: 1px solid #d4d4d4;
+  border-right: 1px solid #d4d4d4;
+  background-color: #eaeaea;
+}
+.ad-advance-search input[type="text"]{
+  padding: 0px 0px 2px 10px;
+  margin-bottom: 0px;
+}
+.ad-spacer {
+  margin-top: 20px;
+}
+.ad-spacer-small {
+  margin-top: 10px;
+}
+.ad-spacer-bottom{
+  margin-bottom: 20px;
+}
+/* home page action popup container */
+.ad-grid-link-outer{
+  position: relative;
+}
+/* home page action popup window */
+.ad-grid-link-inner{
+  display: none;
+  position: fixed;
+  height: 80px;
+  width: 90px;
+  background: url(../img/ad-icons.png) no-repeat -37px -64px;
+  z-index: 9999;
+  top:0px;
+  padding:5px 5px 5px 20px;
+}
+.ad-grid-link-inner a{
+  display: block;
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+.ad-grid-link-inner a:hover{
+  text-decoration: underline;
+}
+.ad-grid-link-inner .ad-red:hover{
+  color: red;
+}
+.ad-bottom-line {
+  border-bottom: 1px solid #ccc;
+}
+.ad-border-line {
+  border: 1px solid #d2d2d2;
+}
+/* homepage db connection count */
+.ad-text-vertical{
+  line-height: 30px;
+}
+.ad-red{
+  color: red;
+}
+.ad-truncate a{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+/* ---- create new report page ----*/
+/* new report nav tab */
+.ad-report-nav{
+  background-color: #d2d2d2;
+  vertical-align: middle;
+}
+.nav-head-cell{
+  padding: 7px 0px 0px 15px;
+  display: inline-block;
+}
+.ad-new-report .icon-question-sign{
+  margin-left: 5px;
+  line-height: 30px;
+  position: relative;
+}
+/* new report nav tab margin to 0  */
+.ad-report-nav [class*="span"] {
+  margin-left: 0;
+}
+/* new report nav tab to equal width  */
+.ad-report-nav .span3{
+  width: 25.00%;
+}
+/* new report/connection form  */
+.ad-forms{
+  color: #666666;
+  min-height: 350px;
+}
+.ad-forms-txt{
+  padding-left: 15px;
+}
+.ad-forms-sml-head{
+  font-weight: bold;
+  line-height: 30px;
+}
+.ad-option-popup-outer{
+  position: relative;
+}
+/* action popup window */
+.ad-option-popup-inner{
+  display: none;
+  position: fixed;
+  height: 55px;
+  width: 110px;
+  background: url(../img/ad-icons.png) no-repeat -153px -64px;
+  z-index: 9999;
+  top: 0px;
+  padding: 5px 5px 5px 20px;
+}
+.ad-option-popup-inner a{
+  display: block;
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+.ad-option-popup-inner a:hover{
+  text-decoration: underline;
+}
+.ad-option-popup-inner .ad-red:hover{
+  color: red;
+}
+.ad-forms input[type="radio"],input[type="checkbox"] {
+  margin: 0px 4px 6px 0px;
+}
+/* new report page button alignment */
+.ad-forms .ad-add-btn{
+  margin: 0px 3px 10px 3px;
+}
+/* report sql page button alignment */
+.ad-forms .ad-sql-btn{
+  margin: 5px 10px 0px 0px;
+}
+.ad-forms .ad-text-middle{
+  line-height: 25px;
+  vertical-align: text-bottom;
+}
+.ad-ajax-loading{
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  margin-top: 1px;
+  line-height: 37px;
+  vertical-align: text-top;
+  background-image: url("../img/ajax-loader.gif");
+  background-repeat: no-repeat;
+}
+
+/* reports schedules table*/
+.ad-schedule-tbl{
+  width: 600px;
+  border: 1px solid #e2e2e2;
+  margin-top: 4px;
+}
+.ad-schedule-tbl thead{
+  background-color: #e2e2e2;
+}
+/* db connection table in report input page*/
+.ad-db-tbl{
+  border: 1px solid #e2e2e2;
+  margin-bottom: 7px;
+}
+.ad-db-tbl thead{
+  background-color: #e2e2e2;
+}
+
+.ad-field-sel-head{
+  background-color: #e2e2e2;
+  line-height: 40px;
+  vertical-align: middle;
+  padding-left: 10px;
+  font-weight: bold;
+}
+.ad-field-sel-head input[type="text"]{
+  margin-bottom: 0px;
+  padding: 0px;
+  max-width: 110px;
+}
+.ad-report-nav-active{
+  background-color: #ffffff;
+  font-weight: bold;
+  height: 34px;
+}
+
+/* date picker close button border fix*/
+ .ad-date > .input-append .btn:last-child {
+  -webkit-border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px;
+}
+.ad-date > .input-append .btn-group >.btn:last-child{
+  -webkit-border-radius: 0px 4px 4px 0px;
+  -moz-border-radius: 0px 4px 4px 0px;
+  border-radius: 0px 4px 4px 0px;
+}
+
+/*field selector button container*/
+.ad-field-control{
+  text-align: center;
+  padding-top: 70px;
+}
+/*excel theme container*/
+.ad-theme-container{
+  border: 1px solid #ccc;
+  padding: 10px 15px 15px 15px;
+}
+.ad-theme-container .span3{
+  text-align: center;
+}
+/* IO custom table style */
+.ad-table{
+  width: 100%;
+  text-align: left;
+}
+.ad-table td, .ad-table th{
+  padding: 5px 10px 5px 15px;
+  text-align: left;
+}
+/*excel theme light blue */
+.ad-excel-tbl-blue1{
+  border: 1px solid #1fc0ff;
+  color: #1fc0ff;
+}
+.ad-excel-tbl-blue1 thead{
+  background-color: #1fc0ff;
+  color: #ffffff;
+}
+.ad-excel-tbl-blue1 tbody > tr:nth-child(even) > td {
+  background-color: #d9fff7;
+}
+/*excel theme orange */
+.ad-excel-tbl-orange{
+  border: 1px solid #ffa765;
+  color: #ffa765;
+}
+.ad-excel-tbl-orange thead{
+  background-color: #ffa765;
+  color: #ffffff;
+}
+.ad-excel-tbl-orange tbody > tr:nth-child(even) > td {
+  background-color: #ffeecd;
+}
+/*excel theme green */
+.ad-excel-tbl-green{
+  border: 1px solid #52cb16;
+  color: #52cb16;
+}
+.ad-excel-tbl-green thead{
+  background-color: #52cb16;
+  color: #ffffff;
+}
+.ad-excel-tbl-green tbody > tr:nth-child(even) > td {
+  background-color: #d6ffc1;
+}
+/*excel theme dark blue */
+.ad-excel-tbl-blue2{
+  border: 1px solid #0971b6;
+  color: #0971b6;
+}
+.ad-excel-tbl-blue2 thead{
+  background-color: #0971b6;
+  color: #ffffff;
+}
+.ad-excel-tbl-blue2 tbody > tr:nth-child(even) > td {
+  background-color: #e2ebfd;
+}
+/*javascript scroll container for report sql  */
+.ad-sql-scroll-pane{
+  max-height: 258px;
+  overflow: auto;
+  border: 1px solid #e2e2e2;
+}
+/*new report sql table*/
+.ad-sql-tbl thead{
+  background-color: #d2d2d2;
+}
+.ad-sql-tbl tbody > tr:nth-child(even) > td {
+  border-bottom: 1px solid #d2d2d2;
+  border-top: 1px solid #d2d2d2;
+}
+.ad-sub-head{
+  background-color: #f2f2f2;
+  border-top: 1px solid #cccccc;;
+}
+/*javascript scroll container for field selector  */
+.ad-avail-scroll-pane{
+  height: 190px;
+  overflow: auto;
+  border: 1px solid #e2e2e2;
+}
+
+/* ---- new connection page ---- */
+/* connection page connection list */
+.ad-con-left-panel{
+  background-color: #e9e9e9;
+  border-right: 1px solid #d2d2d2;
+  min-height:437px;
+  overflow: auto;
+}
+.ad-con-left-panel .nav-tabs.nav-stacked  > li > a{
+  border:none;
+  border-bottom: 1px solid #d2d2d2;
+  color:#666666;
+}
+.ad-con-left-panel .nav-tabs.nav-stacked  > li > a:hover{
+  border:none;
+  border-bottom: 1px solid #d2d2d2;
+  border-top: 1px solid #d2d2d2;
+}
+
+
+
+/*---- modal ----*/
+.ad-modal-header{
+  background-color: #d2d2d2;
+  padding: 5px 15px;
+}
+.ad-modal-footer{
+  background-color: #e2e2e2;
+  padding: 10px 15px 3px 10px;
+}
+.ad-modal-left-panel{
+  background-color: #e2e2e2;
+  height:330px;
+  overflow: auto;
+  position: relative;
+  top:-15px;
+  left:-15px;
+}
+.ad-modal-left-hd{
+  padding: 15px 0px 10px 12px;
+}
+.ad-modal-left-panel .nav-tabs.nav-stacked  > li > a{
+  border:none;
+  color:#666666;
+  font-weight: bold;
+}
+.ad-modal-left-panel .nav-tabs.nav-stacked  > li > a:hover{
+  border:none;
+}
+/* adding margin to the inputs in modal  */
+.ad-modal-forms input[type="radio"],input[type="checkbox"] {
+  margin: 0px 4px 6px 0px;
+}
+/* adding margin to the help icon in modal  */
+.ad-modal-forms .icon-question-sign{
+  margin-left: 5px;
+  line-height: 30px;
+  position: relative;
+}
+
+/*---- icons ----*/
+.ad-report-icon{
+  background: url(../img/ad-icons.png) no-repeat 0px -27px;
+  height: 34px;
+  width: 30px;
+  float: left;
+}
+.ad-db-icon{
+  background: url(../img/ad-icons.png) no-repeat -62px -28px;
+  height: 34px;
+  width: 30px;
+  float: left;
+}
+.ad-spacer-bar{
+  background: url(../img/ad-icons.png) no-repeat -22px -70px;
+  height: 30px;
+  width: 10px;
+  padding: 5px 0px 0px 10px;
+}
+.ad-fullscreen-icon{
+  display: inline-block;
+  background: url(../img/ad-icons.png) no-repeat -110px 0px;
+  width: 30px;
+  height: 30px;
+}
+.ad-delete-outer td{
+  width:33%;
+}
+.ad-delete-outer .ad-delete-icon{
+  display: none;
+}
+.ad-delete-icon{
+  display: inline-block;
+  background: url(../img/ad-icons.png) no-repeat -40px -9px;
+  width: 14px;
+  height: 14px;
+}
+.ad-warning-icon{
+  display: inline-block;
+  background: url(../img/ad-icons.png) no-repeat 0px -7px;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+.ad-calendar-icon{
+  display: inline-block;
+  position: relative;
+  left: -25px;
+  top: 2px;
+  background: url(../img/ad-icons.png) no-repeat -20px -6px;
+  width: 20px;
+  height: 20px;
+}
+.ad-calendar-icon-sml{
+  display: inline-block;
+  position: relative;
+  left: -30px;
+  top: 7px;
+  background: url(../img/ad-icons.png) no-repeat -20px -6px;
+  width: 20px;
+  height: 20px;
+}
+.ad-filter-icon{
+  display: inline-block;
+  position: relative;
+  left: -25px;
+  top: 2px;
+}
+.ad-left-icon{
+  display:inline-block;
+  background: url(../img/ad-icons.png) no-repeat -57px -165px;
+  width: 36px;
+  height: 36px;
+}
+.ad-right-icon{
+  display: inline-block;
+  background: url(../img/ad-icons.png) no-repeat -96px -165px;
+  width: 36px;
+  height: 36px;
+}
+.ad-nav-active-arrow{
+  background: url(../img/ad-icons.png) no-repeat 0px -161px;
+  height: 34px;
+  width: 13px;
+}
+.ad-nav-inactive-arrow{
+  background: url(../img/ad-icons.png) no-repeat -37px -160px;
+  height: 34px;
+  width: 13px;
+}
+.ad-nav-active-left-arrow{
+  background: url(../img/ad-icons.png) no-repeat -18px -161px;
+  height: 34px;
+  width: 13px;
+}
+
+
+/*-- form validation --*/
+.ad-forms input.ng-invalid.ng-dirty, .ad-forms select.ng-invalid.ng-dirty, .ad-forms textarea.ng-invalid.ng-dirty{
+ background-color: #f9f1e6;
+}
+
+.time-picker{
+  display: inline-block;
+  vertical-align: middle;
+}
+.time-picker .control-group{
+  width:40px;
+}
+.time-picker .control-group .span1{
+  width:40px;
+}
+.time-picker .btn{
+  padding: 0px;
+}
+
+.ad-alert{
+  margin-bottom: 0px;
+}
+.ad-code{
+  display: block;
+  font-size: 13px;
+  line-height: 20px;
+  margin-right: 25px;
+  padding: 3px 10px 3px 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.ad-sortable{
+  cursor: move;
+}
+
+/* overriding bootstrap style for required select field */
+select:focus:invalid {
+  color: #333333;
+}
+/* overriding bootstrap style for modal-body */
+.modal-body {
+  max-height: 500px !important;
+}
+/* overriding bootstrap style for select */
+.schedule-status {
+  width: 116px  !important;
+}
+/* Remove achor tag underline */
+.non-link a,  a:hover.non-link,  a:focus.non-link {
+  text-decoration: none;
+}
+/* overriding bootstrap modal width */
+body .modal {
+  width: 410px;
+}
+/* overriding bootstrap confirmation modal style */
+body .my-class {
+  top: 30%;
+  width:151px;
+  left: 59%;
+}
+.brand {
+color: rgb(114, 114, 114); 
+padding: 8px 20px 12px; 
+font-size: 38.5px;
+}
+
+
+
+
+
+

@@ -1,0 +1,111 @@
+<link rel="apple-touch-icon" href="{{&static_img_url}}/ios/57/{{&application_icon}}.png"/>
+<link rel="apple-touch-icon" sizes="72x72" href="{{&static_img_url}}/ios/72/{{&application_icon}}.png"/>
+<link rel="apple-touch-icon" sizes="114x114" href="{{&static_img_url}}/ios/114/{{&application_icon}}.png"/>
+<link rel="apple-touch-icon" sizes="144x144" href="{{&static_img_url}}/ios/144/{{&application_icon}}.png"/>
+{{#header.subnav.enabled}}
+  <style>
+      /*Set height for fixed top bar*/
+    body {
+      padding-top: 110px;
+    }
+
+    @media (max-width: 979px) {
+      /* Fix positioning*/
+      body {
+        padding-top: 0;
+      }
+    }
+  </style>
+{{/header.subnav.enabled}}
+
+
+
+<div class="navbar navbar-inverse navbar-fixed-top" id="header-nav">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <ul class="nav">
+        <li>
+          <a href="/" class="brand header-resp-logo-align">
+            <i class="logo-{{&application_icon}} pull-left"></i>
+
+            <div class="header-logo-text">{{&application}}</div>
+          </a>
+        </li>
+        <li class="dropdown header-full">
+          <a href="#" class="dropdown-toggle header-caret-align" data-toggle="dropdown">
+            <b class="caret header-caret-center"></b>
+          </a>
+          <ul class="dropdown-menu header-logo-menu" role="menu">
+            {{#header.apps}}
+              <li>
+                <a href="{{&url}}">
+                  <div class="dropdown-logo-icon"><i class="logo-{{icon}}"></i></div>
+                  <div class="text">{{text}}</div>
+                </a>
+              </li>
+            {{/header.apps}}
+          </ul>
+        </li>
+      </ul>
+
+      <div class="nav-collapse topnav">
+        <span class="header-logo-list header-min">
+          {{#header.apps}}
+            <a href="{{&url}}"><i class="logo-{{icon}}"></i></a>
+          {{/header.apps}}
+        </span>
+        <ul class="nav pull-right header-main-links">
+          {{#header.links}}
+            <li class="header-full {{#active}}active{{/active}}"><a href="{{&url}}"><i
+                class="header-icon-{{icon}}"></i><br/> {{text}}</a></li>
+          {{/header.links}}
+          <hr class="header-min header-hr">
+          {{#header.links}}
+            <li class="header-min {{#active}}active{{/active}}"><a href="{{&url}}">
+              <i class="header-icon-{{icon}}"></i> {{text}}</a></li>
+          {{/header.links}}
+          <hr class="header-min header-hr">
+          <li class="header-min header-match-nav"><a href="{{&user_profile_url}}">
+            <i class="icon-user icon-white"></i> My Profile</a>
+          </li>
+          <!--
+          <li class="header-min header-match-nav"><a href="/notifications">
+            <i class="icon-envelope icon-white"></i> Notifications</a>
+          </li>
+          -->
+          <li class="header-min header-match-nav"><a href="{{&logout_url}}">
+            <i class="icon-off icon-white"></i> Logout</a>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle header-full" data-toggle="dropdown"><i
+                class="header-icon-profile"></i><br/>Profile</a>
+            <ul class="dropdown-menu header-profile-menu" role="menu">
+              <li class="header-full"><a href="{{&colab_url}}{{userId}}"><i class="icon-user"></i> My Profile</a></li>
+              <!--<li class="header-full"><a href="/notifications"><i class="icon-envelope"></i> Notifications</a></li>-->
+              <li class="header-full"><a href="{{&logoff_url}}"><i class="icon-off"></i> Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+    <!--/.container -->
+  </div>
+  <!--/.navbar-inner -->
+</div><!-- /#header-nav-->
+{{#header.subnav.enabled}}
+  <div class="{{&application_icon}} navbar-fixed-top" id="header-subnav">
+    <div class="container">
+      <ul id="header-subnav-items">
+        {{#header.subnav.links}}
+          <li><a class="{{#active}}active {{/active}}{{class}}" href="{{url}}">{{{text}}}</a></li>
+        {{/header.subnav.links}}
+      </ul>
+    </div>
+  </div><!-- /#header-subnav-->
+{{/header.subnav.enabled}}

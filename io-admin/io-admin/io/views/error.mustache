@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <title>GE I/O</title>
+  <meta name="description" content="Data Visualization" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=8" />
+  <link href="{{& static_css_url}}/bootstrap.css?bust={{version}}" rel="stylesheet"/>
+  <link href="{{& static_css_url}}/header.css?bust={{version}}" rel="stylesheet"/>
+  <link href="{{& static_css_url}}/bootstrap-responsive.css?bust={{version}}" rel="stylesheet"/>
+
+  <!--[if lt IE 9]>
+  <script src="{{& static_js_url}}/lib/json2.js?bust={{version}}"></script>
+  <![endif]-->
+
+  <link rel="shortcut icon" href="/favicon.ico"/>
+
+  <script type="text/javascript">
+    var io = {
+      'VERSION': '{{version}}',
+      'jsModule': '{{jsModule}}'
+    };
+  </script>
+  <script data-main="{{& static_js_url}}/main" src="{{& static_js_url}}/require.js?bust={{version}}"></script>
+</head>
+
+<body>
+{{>header}}
+<div class="modal error-modal hide fade" id="error">
+  <div class="modal-header">
+    <strong>There has been an error</strong>
+  </div>
+  <div class="modal-body">
+    {{ERROR}}
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal">Home</button>
+  </div>
+</div>
+</body>
+</html>

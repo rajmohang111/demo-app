@@ -1,0 +1,10 @@
+<div data-report-option-popup="ad-grid-link-inner" class="ngCellText" ng-class="col.colIndex()"  >
+  <div class="ad-grid-link-outer">
+    <span ng-cell-text > <a href="#" class="non-link"> {{row.entity[col.field]}}</a></span>
+     <span class="ad-grid-link-inner">
+        <a href="#" ng-click="reportExecute({{row.entity['id']}})"><i class="icon icon-play"></i> Execute </a>
+        <a href="#/reports/{{row.entity['id']}}/"><i class="icon icon-tag"></i> View </a>
+        <a href="#" ng-click="reportDelete({{row.entity['id']}})" class="ad-red"><i class="ad-delete-icon"></i> Delete </a>
+      </span>
+  </div>
+</div>

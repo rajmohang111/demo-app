@@ -1,0 +1,3 @@
+<select ng-model="scheduleList[ row.rowIndex ].status" ng-change="confirmStatusChange(scheduleList[ row.rowIndex ].job_id,scheduleList[ row.rowIndex ].status)" class="schedule-status" ng-disabled='validateStatus(scheduleListTmp[ row.rowIndex ].status)'>
+    <option ng-repeat="st in status.val" ng-disabled="st.selectable">{{st.name}}</option>
+</select>

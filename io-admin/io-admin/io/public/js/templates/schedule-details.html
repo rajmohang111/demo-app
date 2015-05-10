@@ -1,0 +1,37 @@
+<div modal="scheduleModalShouldBeOpen" close="scheduleModalClose()" options="modalOpts" class="modal hide fade">
+    <div class="modal-header ad-modal-header schedule-modal">
+        <button type="button" class="close" ng-click="scheduleModalClose()">×</button>
+        <h5 id="query-modal-label">Schedule Details</h5>
+    </div>
+    <div class="modal-body">
+        <alert ng-repeat="alert in modalAlerts" type="alert.type" close="closeModalAlerts($index)">{{alert.msg}}</alert>
+        <!-- schedule grid view  --> 
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="add-schedules-grid" ng-grid="scheduleOptions"></div>
+            </div>
+        </div>
+        <!-- End schedule grid view  -->
+    </div>
+    <div class="modal-footer ad-modal-footer">
+    </div>
+</div>
+<!--schedule status change confirmation modal-->
+<div options="{dialogClass: 'modal my-class'}" modal="confirmModalShouldBeOpen" close="confirmModalClose()"  class="modal hide fade">
+    <div class="modal-body">
+        <!-- schedule grid view  --> 
+        <div class="row-fluid">
+            <div class="span12">
+              Please confirm the status change.
+            </div>
+        </div>
+        <!-- End schedule grid view  -->
+    </div>
+    <div class="modal-footer ad-modal-footer">
+          <button class="btn btn-primary" ng-click="updateScheduleStatus()">OK</button>
+          <button class="btn btn-warning" ng-click="confirmModalClose()">Cancel</button>
+    </div>
+</div> 
+
+
+
